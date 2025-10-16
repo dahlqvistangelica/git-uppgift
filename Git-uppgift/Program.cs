@@ -4,7 +4,8 @@
     using System.Collections.Generic;
     class Program
     {
-        static List<string> inventory = new List<string>(); static void Main(string[] args)
+        static List<string> inventory = new List<string>(); 
+        static void Main(string[] args)
         {
             Console.WriteLine("Välkommen till Fabrikshanteringssystemet!"); while (true)
             {
@@ -14,11 +15,46 @@
                         LäggTillProdukt();
                         break;
                     case "2": VisaInventarie(); break;
-                    case "3": return;
+                    case "3": TaBortProdukt(Console.ReadLine()); break;
                     default: Console.WriteLine("Ogiltigt val. Försök igen."); break;
                 }
             }
         }
         static void LäggTillProdukt()
-        { // TODO: Implementera metod för att lägga till produkt } static void VisaInventarie() { // TODO: Implementera metod för att visa inventarie } }
+        { //TODO: Implementera metod för att lägga till produkt
+
+            {
+                while (true)
+                {
+                    Console.Write("Ange namn på produkten: ");
+                    string productName = Console.ReadLine();
+
+                    if (string.IsNullOrEmpty(productName))
+                        Console.WriteLine("Du måste ange ett namn");
+
+                    inventory.Add(productName);
+
+                    Console.WriteLine($"{productName} är tillagd.");
+                    break;
+                }
+            }
         }
+        static void TaBortProdukt(string productToRemove)
+        {
+            inventory.Remove(productToRemove);
+        }
+        static void VisaInventarie()
+        {
+            foreach (string item in inventory)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+    }
+    /*
+     * 1. Undvik att merga i webläsaren och ta inte in båda sidor i en konflikt
+     * 2. Lösa konflikter
+     * 3.Inte possitivt men mycket skratt!
+     */ 
+}
