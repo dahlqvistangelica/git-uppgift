@@ -14,6 +14,10 @@
                         LäggTillProdukt();
                         break;
                     case "2": VisaInventarie(); break;
+                    case "3":
+                        string userInput = Console.ReadLine();
+                        TaBortProdukt(userInput);
+                        break;
                     case "3": return;
                     default: Console.WriteLine("Ogiltigt val. Försök igen."); break;
                 }
@@ -21,4 +25,9 @@
         }
         static void LäggTillProdukt()
         { // TODO: Implementera metod för att lägga till produkt } static void VisaInventarie() { // TODO: Implementera metod för att visa inventarie } }
+        }
+
+        static void TaBortProdukt(string productToRemove)
+        {
+            inventory.RemoveAll(productToRemove);
         }
