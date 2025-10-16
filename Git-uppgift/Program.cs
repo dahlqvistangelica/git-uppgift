@@ -20,5 +20,23 @@
             }
         }
         static void LäggTillProdukt()
-        { // TODO: Implementera metod för att lägga till produkt } static void VisaInventarie() { // TODO: Implementera metod för att visa inventarie } }
+        {
+            while (true)
+            {
+                Console.Write("Ange namn på produkten: ");
+                string productName = Console.ReadLine();
+                
+                if(string.IsNullOrEmpty(productName))
+                    Console.WriteLine("Du måste ange ett namn");
+
+                inventory.Add(productName);
+                
+                Console.WriteLine($"{productName} är tillagd.");
+                break;
+            }
         }
+        static void VisaInventarie()
+        { // TODO: Implementera metod för att visa inventarie } }
+        }
+    }
+}
