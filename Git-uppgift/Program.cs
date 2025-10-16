@@ -8,7 +8,7 @@
         {
             Console.WriteLine("Välkommen till Fabrikshanteringssystemet!"); while (true)
             {
-                Console.WriteLine("\nVälj en åtgärd:"); Console.WriteLine("1. Lägg till produkt"); Console.WriteLine("2. Visa inventarie"); Console.WriteLine("3. Avsluta"); string val = Console.ReadLine(); switch (val)
+                Console.WriteLine("\nVälj en åtgärd:"); Console.WriteLine("1. Lägg till produkt"); Console.WriteLine("2. Visa inventarie"); Console.WriteLine("3. Ta bort produkt"); Console.WriteLine("4. Avsluta"); string val = Console.ReadLine(); switch (val)
                 {
                     case "1":
                         LäggTillProdukt();
@@ -18,7 +18,7 @@
                         string userInput = Console.ReadLine();
                         TaBortProdukt(userInput);
                         break;
-                    case "3": return;
+                    case "4": return;
                     default: Console.WriteLine("Ogiltigt val. Försök igen."); break;
                 }
             }
