@@ -4,7 +4,8 @@
     using System.Collections.Generic;
     class Program
     {
-        static List<string> inventory = new List<string>(); static void Main(string[] args)
+        static List<string> inventory = new List<string>(); 
+        static void Main(string[] args)
         {
             Console.WriteLine("Välkommen till Fabrikshanteringssystemet!"); while (true)
             {
@@ -24,6 +25,8 @@
             }
         }
         static void LäggTillProdukt()
+        { //TODO: Implementera metod för att lägga till produkt
+
         {
             while (true)
             {
@@ -49,3 +52,15 @@
         {
             inventory.RemoveAll(productToRemove);
         }
+        static void VisaInventarie()
+        { // TODO: Implementera metod för att visa inventarie
+        foreach (string item in inventory)
+            {
+                Console.WriteLine(item);
+            }
+                
+
+            
+        }
+    }
+}
