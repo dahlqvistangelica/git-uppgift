@@ -25,8 +25,6 @@
             }
         }
         static void LäggTillProdukt()
-        { //TODO: Implementera metod för att lägga till produkt
-
         {
             while (true)
             {
@@ -42,25 +40,19 @@
                 break;
             }
         }
-        static void VisaInventarie()
-        { // TODO: Implementera metod för att visa inventarie } }
-        }
-    }
-}
-
         static void TaBortProdukt(string productToRemove)
         {
             inventory.RemoveAll(productToRemove);
         }
         static void VisaInventarie()
         { // TODO: Implementera metod för att visa inventarie
-        foreach (string item in inventory)
+            foreach (string item in inventory)
             {
                 Console.WriteLine(item);
             }
-                
 
-            
+
+
         }
     }
 }
