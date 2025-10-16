@@ -42,7 +42,7 @@
         }
         static void TaBortProdukt(string productToRemove)
         {
-            inventory.RemoveAll(productToRemove);
+            inventory.Remove(productToRemove);
         }
         static void VisaInventarie()
         { // TODO: Implementera metod för att visa inventarie
